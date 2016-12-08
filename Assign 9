@@ -1,0 +1,37 @@
+#include <iostream> //
+#include <iomanip> //
+#include <fstream> //
+#include <string> //
+#include <cctype> //
+using namespace std;
+
+struct qbStats { //This struct will hold the information of quarterbacks
+  string first;
+  string last;
+  unsigned int completions;
+  unsigned int attempts;
+  unsigned int yards;
+  unsigned int td;
+  unsigned int interceptions;
+  double qbRating; 
+};
+
+int main(int args, char * argv[])
+{
+    qbStats quarterBacks[QBS];
+    ifstream in;
+ 
+    cout << fixed << setprecision(1);
+ 
+    in.open(argv[1]);
+    if (!in.is_open())
+    {
+        cout << "FILE: " << argv[1] << " does not exist!" << endl;
+        in.close();
+        return 0;
+    }
+ 
+    //YOUR CODE WOULD COME HERE
+ 
+    return 0;
+}
