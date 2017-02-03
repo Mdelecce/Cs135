@@ -1,0 +1,63 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+using namespace std;
+ 
+struct automobile
+{
+    string make;
+    string model;
+    unsigned int year;
+    string engine;
+    string color;
+};
+ 
+const unsigned int DEALERSHIP_SIZE = 20;
+ 
+ void getMake(string, automobile[])
+ void getModel(string, automobile[])
+ void getYear(string, automobile[])
+ void getEngine(string, automobile[])
+ void getColor(string, automobile[])
+ 
+int main(int args, char * argv[])
+{
+    automobile cars[DEALERSHIP_SIZE]; //Array of cars
+     
+    ifstream in;
+    in.open(argv[1]); //attempt to open the filename given by the commandline
+ 
+    if (!in.is_open()) //if file is not found
+    {
+        cout << "File not found!" << endl;
+        in.close();
+        return 0;
+    }
+ 
+   for(int i=0; i < DEALERSHIP_SIZE; i++){
+   in >> cars[i].make;
+   in >> cars[i].model;
+   in >> cars[i].year;
+   in >> cars[i].engine;
+   in >> cars[i].color;
+ }
+ 
+string searchType; // the type of seach you would like to conduct I.E Make, Color ect.
+string searchValue; // The type of thing youre searchin for in the searchtype I.E blue, v8, challenger
+    
+	cout << "Please enter what you would like to search for or hit 'q' to quit: " << endl;
+	cin >> searchType;
+	if (searchType == "q"){
+	cout << "I don't think you know what you want, come take a look at this car over here" << endl;
+	return 0;
+	}
+	cin >> searchValue
+	if(
+	
+	return 0;
+	
+	
+}
+ 
+    return 0;
+}
